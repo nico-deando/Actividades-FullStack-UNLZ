@@ -1,0 +1,65 @@
+
+/* Selector general --> */
+/* *{
+    padding: 0;
+} */
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+}
+/* Selectores de etiqueta --> */
+h1{
+    font-weight: 800;
+}
+h3{
+    text-decoration: underline;
+}
+div{
+    text-align: center;
+}
+p{
+    text-align: left;
+}
+table,
+th,
+td {
+    margin: 0 auto;
+    border: solid 1px black;
+    border-collapse: collapse;
+}
+ul,li{
+    text-align: left;
+}
+/* Selectores de clase --> */
+
+.main__tittle{
+    background-color: #a3a5c3;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.nav__bar{
+    border: 1.8px solid black;
+}
+
+/* .article__01{
+    background-color: #a3a5c3;
+}
+
+.article__02{
+    background-color: #a9d2d5;
+}
+
+.article__03{
+    background-color: aquamarine;
+}
+
+.footer{
+    background-color: #395c6b;
+} */
+
+/* Selectores por ID --> */
+#lista__subrayada > li{
+    text-decoration: underline;
+   
+}

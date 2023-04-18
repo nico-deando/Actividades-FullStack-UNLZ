@@ -6,6 +6,7 @@
 body{
     font-family: 'Nunito Sans', sans-serif;
     background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+    font-weight: 300;
 }
 /* Selectores de etiqueta --> */
 h1{

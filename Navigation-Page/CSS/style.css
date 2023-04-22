@@ -1,0 +1,67 @@
+html{
+    font-size: 18px;
+    
+}
+body{
+   
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    color: rgba(120, 120, 255, 0.979);
+}
+ul li{
+    display: inline-block;
+}
+nav{
+    border: 1.8px solid black;
+}
+div{
+    margin-bottom: 1em;
+}
+form{
+    margin: 0 auto;
+    display: block;
+    
+    /*  height: 100vh; */
+    /* background-image: url(../images/contact-1440.1440.avif); */
+}
+label{
+    display: block;
+}
+input{
+    margin-bottom: 15px;
+}
+button{
+    margin: 0 auto;
+    display: block;
+}
+.main__article{
+    height: 100%;
+}
+.about__img > img{
+   margin: 0 auto;
+   width: 50%;
+   height: 50%;
+   display: block;
+   margin-bottom: 10px;
+}
+.contact__container{
+    background-image: url(../images/Mustang-1440.1440.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    padding-top: 100px;
+}
+.contact__article{
+    margin: 0 auto;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    width: 300px;
+    height: 320px;
+}
+.select__bar{
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+

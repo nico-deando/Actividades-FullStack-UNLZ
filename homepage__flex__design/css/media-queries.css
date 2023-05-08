@@ -1,0 +1,27 @@
+@media only screen and (min-width:660px){
+        .top__section{
+            flex-direction: row;
+        }
+        .home__section{
+            height: auto;
+        }
+}
+
+@media only screen and (min-width:768px) {
+    .top__section{
+        min-height: 400px;
+    }
+    .shop__section{
+        padding: 100px 30px 0 30px;
+        margin: 0;
+    }
+    .bottom__section{
+        display: flex;
+    }
+    .about{
+        width: fit-content;
+    }
+    .image__1,.image__2{
+        background-position: center;
+    }
+}

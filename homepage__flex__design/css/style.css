@@ -1,0 +1,199 @@
+:root {
+    --Dark-Gray: hsl(0, 0%, 63%);
+    --Black: hsl(0, 0%, 0%);
+    --White: hsl(0, 0%, 100%);
+    --Very-Dark-Gray: hsl(0, 0%, 27%);
+}
+
+* {
+    box-sizing: border-box;
+    /*     margin: 0;
+    padding: 0; */
+}
+
+body {
+    font-size: 100%;
+    font-family: 'League Spartan', sans-serif;
+}
+
+main {
+    /* min-width: 320px; */
+    /* max-width: 599px; */
+    min-height: 375px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+p {
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--Very-Dark-Gray);
+}
+
+div {}
+
+article {}
+
+ul {
+    color: antiquewhite;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.top__section {
+  /*   display: flex;
+    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.home__section {
+    display: flex;
+    flex-direction: row;
+    height: 350px;
+    width: 100%;
+    background-image: url("../images/desktop-image-hero-1.jpg");
+    background-size: cover;
+    flex-wrap: wrap;
+
+}
+
+.nav__bar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding: 10px;
+
+}
+.tittle{
+    margin-left: 30%;
+    color: var(--White);
+}
+.nav__button{
+    background: none;
+    border: none;
+    margin: 10px;
+    display: flex;
+    max-width: 35px;
+}
+.nav__button:hover{
+    cursor: pointer;
+}
+.nav__button ~ ul{
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s;
+    transition-duration: revert;
+}
+.nav__button:focus ~ .tittle{
+    display: none;
+}
+
+.nav__button:focus ~ ul{
+    height: 40px;
+    padding: 0;
+    margin-left: 15px;
+    /* margin-left: 5%; */
+    text-decoration: underline;
+}
+
+.buttons__position {
+    display: flex;
+    align-items: end;
+}
+
+.left__btn,.right__btn{
+    max-width: 50px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.left__btn{
+    background-image: url("/images/icon-angle-left.svg");
+    background-position: center;
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+.right__btn{
+    background-image: url("/images/icon-angle-right.svg");
+    background-position: center;
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+
+
+.shop__section {
+   /*  display: flex;
+    justify-content: column; */
+    width: 100%;
+    /* height: 50%; */
+    padding: 60px 15px 70px 15px;
+}
+
+.shop>h1 {
+    font-size: 35px;
+    margin:0;
+}
+
+.shop__button {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: var(--Very-Dark-Gray);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.bottom__section {
+/*     display: flex;
+    flex-direction: column;
+    justify-content: space-around; */
+}
+
+.image__1 {
+    width: 100%;
+    min-height: 300px;
+    background-image: url("/images/image-about-dark.jpg");
+    background-size: cover;
+}
+
+.image__2 {
+    width: 100%;
+    min-height: 300px;
+    background-image: url("/images/image-about-light.jpg");
+    background-size: cover;
+}
+/* picture{
+    display: flex;
+    width: 100%;
+
+}
+picture ~ img{
+    height: 100%;
+    width: 100%;
+} */
+.about {
+    padding: 20px;
+}
+
+.about>h3 {
+    letter-spacing: 3px;
+    font-size: 15px;
+    text-transform: uppercase;
+
+}

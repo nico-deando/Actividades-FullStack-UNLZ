@@ -1,0 +1,15 @@
+@media only screen and (min-width:900px){
+    header{
+        display: none;
+    }
+    .main__container{
+        justify-content: space-around;
+    }
+    .footer__images{
+        margin-top: 1em;
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+}

@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+p{
+    color: #6D6D6D;
+}
+img{
+    display: inline-block;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.contact__section{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: #131313;
+}
+.contact__header{
+    display:flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.icons{
+    display: inline-block;
+}
+.lupa{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 35px;
+    border: 1px solid #5a5a5a;
+    border-radius: 15px;
+    background-color: #000000;
+
+}
+.lupa__input{
+    background-color: #000000;
+    border:none;
+    width: 80%;
+}
+.contacts{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #131313;
+}
+.contacts > div {
+    width: 100%;
+    height: 70px;
+    border: 1px solid wheat;
+}

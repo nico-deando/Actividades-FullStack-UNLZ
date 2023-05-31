@@ -16,6 +16,7 @@ class Player {
     console.log(
       "El juego es una batalla por turnos, golpea uno luego el otro. NO PUEDES GOLPEAR DOS VECES SEGUIDAS"
     );
+    console.log("Los jugadores son: player1 y player2");
     console.log(
       "Los jugadores tienen 2 ataques disponibles, 2 ayudas y 100pts de vida en total: "
     );

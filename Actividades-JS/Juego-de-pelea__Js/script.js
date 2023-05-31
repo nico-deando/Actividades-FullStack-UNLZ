@@ -208,7 +208,8 @@ console.log("Bienvenido al juego de pelea de JavaScrpit...");
 console.log(
   "En esta batalla epica, sere yo (La consola) quien relate las proesas en el campo de batalla"
 );
-console.log("Comenzara atacando el player uno...");
+console.log("Los jugadores seran 2: player1 y player2");
+console.log("Comenzara atacando el player1...");
 console.log(
   "Si necesitas mas detalles acerca del juego por favor, escribe: .ayuda() luego del nombre de tu player"
 );

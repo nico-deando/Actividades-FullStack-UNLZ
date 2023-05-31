@@ -20,9 +20,11 @@ class Player {
       "Los jugadores tienen 2 ataques disponibles, 2 ayudas y 100pts de vida en total: "
     );
     console.log("LOS ATAQUES SON:");
-    console.log("ataqueNormal() : atacas con 10pts de daño al oponente");
     console.log(
-      "ataqueEspecial() : atacas por 40pts de daño al oponente, SOLO PUEDES USARLO UNA SOLA VEZ"
+      "ataqueNormal(nombre del jugador a quien atacas) : atacas con 10pts de daño al oponente"
+    );
+    console.log(
+      "ataqueEspecial(nombre del jugador a quien atacas) : atacas por 40pts de daño al oponente, SOLO PUEDES USARLO UNA SOLA VEZ"
     );
     console.log("LAS AYUDAS SON:");
     console.log(

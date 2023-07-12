@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Gill Sans Std Regular';
+    background-image: url("./resources/P23_Ciudad_Milyfa.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 110%;
+}
+@font-face {
+    font-family: 'Gill Sans Std Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gill Sans Std Regular'), url('GillSansStd.woff') format('woff');
+    }
+    
+
+.main__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    border-radius: 20px;
+    height: 600px;
+    width: 450px;
+}
+
+.card__info{
+    background-image: url("./resources/a6487e85-c45f-45ff-853e-4460f6772f67.png");
+    background-position: center;
+    background-size: cover;
+    width: 93%;
+    height: 94%;
+    border-radius: 10px;
+
+}
+
+.top__bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.name{
+    display: flex;
+    justify-content: center;
+}
+.name > img{
+    overflow-x: visible;
+
+    width:70px;
+    height:25px;
+
+}
+.name > p{
+    margin: 0;
+    font-size: 30px;
+    padding-left: 10px;
+}
+.vida{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vida > img{
+    margin-left: 10px;
+}
+.vida > p{
+    margin: 0;
+    font-size: 30px;
+}
+.vida > .tipo_de_pokemon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: antiquewhite;
+    z-index: 1;
+    border: 1px solid black;
+}
+.pokemon__image{
+    margin: 0 auto;
+    width: 380px;
+    height: 250px;
+    margin-bottom: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.pie__de__foto{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:390px;
+    height: 20px;
+    margin: 0 auto;
+    background-color:#FFE165 ;
+    border-radius: 10px;
+}
+.habilidad__info{
+    text-align: center;
+}
+.footer__info{
+    display: flex;
+    justify-content: space-around;
+}
+

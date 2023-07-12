@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="main__container">
+      <header class="header">
+        <h1>PokeDex</h1>
+        <button id="btn" onclick="delayTraerPokemones()">Conectar</button>
+        <input type="text" placeholder="Buscar Pokemon" id="pokemon_buscado" />
+        <button type="submit" onclick="buscarPokemon()">Buscar</button>
+      </header>
+      <div id="container">
+        <p class="item">No hay informacion</p>
+      </div>
+      <div id="pagination" class="paginas">
+        <button id="pag__anterior" onclick="irAPaginaAnterior()">
+          Pag Anterior
+        </button>
+        <div id="cantidad__de__paginas"></div>
+        <button id="pag__siguiente" onclick="irAPaginaSiguiente()">
+          Siguiente pag
+        </button>
+      </div>
+    </main>
+  </body>
+  <script src="/scripts/index.js"></script>
+</html>

@@ -5,13 +5,15 @@ const contenedor__de__paginas = document.getElementById(
   "cantidad__de__paginas"
 );
 const pokemonBuscado = document.getElementById("pokemon_buscado")
+let arrayDePokemones = []
+let bandera = true;
 
 let pagina = 0;
 let limiteDelListado;
 let cantidadDePaginas;
 
 function traerPokemones(limite = 10, offset = 0) {
-  setTimeout((contenido.innerText = "Cargando..."), 2000);
+  /* setTimeout((contenido.innerText = "Cargando..."), 2000); */
   const respuesta = fetch(
     `https://pokeapi.co/api/v2/pokemon?limit=${limite}&offset=${offset}`
   );
@@ -24,7 +26,7 @@ function traerPokemones(limite = 10, offset = 0) {
     })
     .then((respuestaComoJson) => {
       limiteDelListado = respuestaComoJson.count;
-      cantidadDePaginas = limiteDelListado / 10;
+      cantidadDePaginas = Math.round(limiteDelListado / 10);
 
       console.log(respuestaComoJson);
       contenido.innerText = "";
@@ -36,15 +38,20 @@ function traerPokemones(limite = 10, offset = 0) {
 
         console.log(element.name);
         /* generardorDePaginas(); */
+        bandera = true
       });
     });
     /* buscarPokemon() */
 }
 
 function irAPaginaSiguiente() {
-  if (pagina < cantidadDePaginas) {
+  if (pagina < cantidadDePaginas-1) {
     pagina++;
-    traerPokemones(10, pagina * 10);
+    if(bandera){
+      traerPokemones(10, pagina * 10);
+    }else{
+      imprimirPokemones(arrayDePokemones)
+    }
   }
   console.log(pagina);
 }
@@ -52,7 +59,11 @@ function irAPaginaSiguiente() {
 function irAPaginaAnterior() {
   if (pagina > 0) {
     pagina--;
-    traerPokemones(10, pagina * 10);
+    if(bandera){
+      traerPokemones(10, pagina * 10);
+    }else{
+      imprimirPokemones(arrayDePokemones)
+    }
   }
   console.log(pagina);
 }
@@ -88,24 +99,48 @@ function numPag() {
 function delayTraerPokemones() {
   let parrafo = "Conectando a base de datos de PokeDex...";
   contenido.innerText = parrafo;
-  setTimeout((contenido.innerText = parrafo), 2000);
+/*   setTimeout((contenido.innerText = parrafo), 2000); */
   setTimeout(traerPokemones, 2000);
 }
 
-/* function buscarPokemon(){
+function buscarPokemon(){
   const respuesta = fetch("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0")
   respuesta.then((respuesta)=>{
     if(respuesta.ok){
       return respuesta.json()
     }
   }).then((respuestaJson)=>{
-   const rst = Object.entries(respuestaJson.results)
-    for(let i = 0; i<1280;i++){
+   contenido.innerHTML = ""
+
+  /*   for(let i = 0; i<1280;i++){
      if(respuestaJson.results[i].name.includes(pokemonBuscado.value)){
       let parrafo = document.createElement("p")
       contenido.innerHTML += `<p><a href="pokemon__detalle.html?name=${respuestaJson.results[i].name}">${respuestaJson.results[i].name}</a></p>`;
-      
      } 
+    } */
+    /* Se necesita un array de objetos que contenga el nombre del pokemon,{name:zubat} */
+    arrayDePokemones =  respuestaJson.results.filter((pokemon)=>{
+      return pokemon.name.includes(pokemonBuscado.value)
     }
+    ).map((pokemon)=>{
+      return {name:pokemon.name}
+    })
+
+    limiteDelListado = arrayDePokemones.length
+    cantidadDePaginas = Math.round(limiteDelListado / 10)
+    console.log(arrayDePokemones)
+    pagina = 0
+    imprimirPokemones(arrayDePokemones)
+    bandera = false
 })
-} */
+}
+
+function imprimirPokemones(array){
+  contenido.innerHTML = ""
+array.slice(pagina * 10,pagina * 10 +10).forEach((element)=>{
+  let parrafo = document.createElement("p");
+        parrafo.classList.add("item");
+        parrafo.innerHTML = `<a href="pokemon__detalle.html?name=${element.name}">${element.name}</a>`;
+        contenido.append(parrafo);
+})
+}

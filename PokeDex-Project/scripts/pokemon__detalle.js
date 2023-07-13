@@ -30,8 +30,8 @@ function mostratDetallePokemon() {
       }
     })
     .then((respuestaJson) => {
-      const pokemonImagen = Object.entries(respuestaJson.sprites.other)[0][1].front_default
-      numeroPokemon.innerText += ": " + respuestaJson.id;
+      const pokemonImagen = respuestaJson.sprites.other["official-artwork"].front_default
+      numeroPokemon.innerText += ": " + respuestaJson.id
       vidaPokemon.innerText += ": " + respuestaJson.stats[0].base_stat;
       alturaPokemon.innerText += ": " + respuestaJson.height + "'";
       pesoPokemon.innerText += ": " + respuestaJson.weight;

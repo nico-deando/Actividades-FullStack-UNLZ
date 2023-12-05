@@ -1,0 +1,11 @@
+Crear un TODO list:
+
+- Tiene que tener un campo de texto en el que el usuario pueda ingresar su nueva tarea
+- Tiene que tener un botón que le permita al usuario registrar esa nueva tarea
+- Cuando el usuario toca el botón para registrar la tarea, esta debe agregarse y
+  verse en un listado debajo del campo de texto, y el campo de texto debe quedar en blanco
+- el usuario debe poder ordenar alfabeticamente ascendente y descendiente
+- el usuario debe poder borrar un item de la lista
+- cada tarea debe tener un boton para ser borrada
+- se nesecita un buscador que necesite ingresar alguna palabra o tarea
+  y que busque entre las tareas, filtrarlas y ver que es lo que consigue

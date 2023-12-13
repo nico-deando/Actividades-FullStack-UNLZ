@@ -27,10 +27,25 @@
       </div>
     </nav>
     <div class="main_container" id="main_container">
-      <div id="pokemon_card" class="pokemon_card">Pokemon</div>
+      <!--  <div id="pokemon_card" class="pokemon_card">
+        <div id="img_container" class="img_container">
+          <img src="" alt="pokemon image" id="pokemon_img" />
+        </div>
+        <div id="poke_info" class="poke_info">
+          <p id="name">Nombre</p>
+          <p id="weight">Weight</p>
+          <p id="height">Height</p>
+        </div>
+      </div> -->
     </div>
     <footer>
-      <button class="pag_btn">Numero de pag</button>
+      <button class="before_pag" id="before_pag" onclick="beforePag()">
+        Atras
+      </button>
+      <button class="after_pag" id="after_pag" onclick="nextPag()">
+        Siguiente
+      </button>
     </footer>
+    <script src="./index.js"></script>
   </body>
 </html>

@@ -43,6 +43,19 @@ header {
   border-radius: 15px;
   margin: 10px;
   background-color: coral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+p {
+  background-color: aqua;
+}
+.img_container {
+  width: 90%;
+  height: 200px;
+  background-color: aqua;
+  margin-top: 10px;
 }
 footer {
   width: 100%;
